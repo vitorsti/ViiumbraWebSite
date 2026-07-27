@@ -27,18 +27,17 @@ npm run preview
 
 Output lands in `dist/`.
 
-## Deploy
+## Deploy (GitHub Pages)
 
-Upload or connect the `dist/` folder to any static host, for example:
+This repo includes a GitHub Actions workflow (`.github/workflows/deploy-pages.yml`) that builds and publishes `dist/` to GitHub Pages on push.
 
-- [Cloudflare Pages](https://pages.cloudflare.com/)
-- [Netlify](https://www.netlify.com/)
-- [GitHub Pages](https://pages.github.com/) (set Vite `base` if using a project path)
+1. Push the repo to GitHub
+2. **Settings → Pages → Build and deployment → Source:** GitHub Actions
+3. After the workflow succeeds, the site is at:
+   - `https://<user>.github.io/<repo>/`
+   - Privacy: `https://<user>.github.io/<repo>/privacy.html`
 
-After deploy, use:
-
-- **Developer website:** `https://your-domain/`
-- **Privacy policy URL:** `https://your-domain/privacy.html`
+You can also host `dist/` on Cloudflare Pages or Netlify. Vite uses `base: './'` so project-path Pages URLs work.
 
 ## Placeholder checklist
 
