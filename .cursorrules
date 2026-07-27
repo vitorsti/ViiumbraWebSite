@@ -1,0 +1,41 @@
+# ViiUmbra Works Website — Cursor Rules
+
+## Project
+Static multi-page marketing site for **ViiUmbra Works**, an independent game development studio. Primary purpose: Google Play / Google developer listing (company website + privacy policy URL).
+
+Live: https://vitorsti.github.io/ViiumbraWebSite/
+
+## Stack
+- Vite + vanilla HTML / CSS / JS (no React/framework unless explicitly requested)
+- Shared styles: `src/styles.css`
+- Shared behavior: `src/main.js`
+- Multi-page entries: `index.html`, `about.html`, `contact.html`, `privacy.html`
+- Deploy: GitHub Actions → GitHub Pages (`.github/workflows/deploy-pages.yml`)
+- Vite `base: './'` — keep asset and page links **relative** (`./about.html`, `./src/main.js`) so project Pages URLs work
+
+## Design
+- Atmospheric umbra / dusk look: ink/charcoal backgrounds, steel-teal accent (`#3d8b8a` / `#5aadaa`)
+- Fonts: Syne (display), Source Sans 3 (body) — do not switch to Inter/Roboto/Arial/system defaults
+- Brand-first hero: **ViiUmbra Works** is the hero-level signal; one headline, one short lead, one CTA group
+- Full-bleed atmospheric hero; no cards in hero; no pill clusters, stat strips, or promo badges
+- Avoid purple-glow / generic AI aesthetic defaults
+- Keep motion intentional (reveal, soft parallax, nav underline); respect `prefers-reduced-motion`
+- Responsive: solid mobile nav + layout
+
+## Content & placeholders
+- Placeholder email: `contact@viiumbra.works` — update all occurrences together when replaced
+- Search `TODO: replace` and `PLACEHOLDER` before shipping legal/contact updates
+- Privacy page must remain a standalone public URL suitable for Play Console
+- Do not invent real legal addresses, company registration, or game data practices — leave placeholders until provided
+
+## Conventions
+- Keep shared header/nav/footer markup consistent across all HTML pages
+- Prefer small, focused changes; do not add a CMS, blog, analytics SDKs, or form backend unless asked
+- Do not commit secrets, tokens, or `.env` files
+- Do not edit plan files under `.cursor/plans/` unless asked
+- Spec of record: `doc/spec.md` — update it when pages, brand tokens, or deploy URLs change materially
+
+## Commands
+- Dev: `npm run dev`
+- Build: `npm run build`
+- Preview: `npm run preview`
