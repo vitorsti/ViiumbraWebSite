@@ -146,6 +146,10 @@ npm run preview  # preview production build
 |-----|-----|
 | Developer website | https://vitorsti.github.io/ViiumbraWebSite/ |
 | Privacy policy | https://vitorsti.github.io/ViiumbraWebSite/privacy.html |
+| AdMob `app-ads.txt` (domain root) | https://vitorsti.github.io/app-ads.txt |
+| AdMob `app-ads.txt` (site copy) | https://vitorsti.github.io/ViiumbraWebSite/app-ads.txt |
+
+AdMob crawls **`https://vitorsti.github.io/app-ads.txt`** (root of the domain listed in Play Store), not the project subdirectory. The authoritative file lives in the `vitorsti.github.io` user Pages repo; a copy is also kept in this site’s `public/app-ads.txt`.
 
 ### Path rule
 
